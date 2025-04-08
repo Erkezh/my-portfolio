@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrambleTextPlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <link rel="icon" href="./assets/logo e color.png" type="image/x-icon" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <a href="#hero" class="logo" style="transform: rotate(0)"
+        ><img src="./assets/logo e color.png" alt=""
+      /></a>
+      <div class="desktop">
+        <div class="header-top">
+          <a href="#projects">Projects</a>
+          <a href="#details">Details</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="header-bottom">
+          <a href="https://github.com/Erkezh" target="_blank"
+            ><img src="./assets/social.png" alt=""
+          /></a>
+          <a
+            href="https://www.instagram.com/welifrin?igsh=NWIwdXVrNWlteGk0&utm_source=qr"
+            target="_blank"
+            ><img src="./assets/instagram-4.png" alt=""
+          /></a>
+          <a href="https://t.me/Erkenaz_zh" target="_blank"
+            ><img src="./assets/telegram-2.png" alt=""
+          /></a>
+        </div>
+      </div>
+
+      <div class="burger" onclick="openNav()">☰</div>
+      <div class="mobile-menu" id="mySidenav">
+        <div class="menu-content">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#projects">Projects</a>
+          <a href="#details">Details</a>
+          <a href="#contact">Contact</a>
+          <div class="socials">
+            <a href="https://github.com/Erkezh" target="_blank"
+              ><img src="./assets/social.png"
+            /></a>
+            <a
+              href="https://www.instagram.com/welifrin?igsh=NWIwdXVrNWlteGk0&utm_source=qr"
+              target="_blank"
+              ><img src="./assets/instagram-4.png"
+            /></a>
+            <a href="https://t.me/Erkenaz_zh" target="_blank"
+              ><img src="./assets/telegram-2.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero" id="hero">
+      <div class="bg">
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"
+        ></script>
+        <spline-viewer
+          url="https://prod.spline.design/RSyl-d1lrpkFA6Vj/scene.splinecode"
+        ></spline-viewer>
+        <div class="block"></div>
+      </div>
+      <div class="name">
+        <h2>Erkenaz Zhanabay</h2>
+        <div class="reveal-wrapper">
+          <h1 class="reveal-text">Front-end</h1>
+          <div class="reveal-block"></div>
+        </div>
+        <br />
+        <div class="reveal-wrapper">
+          <h1 class="reveal-text shifted">Developer</h1>
+          <div class="reveal-block"></div>
+        </div>
+      </div>
+    </div>
+    <div class="projects" id="projects">
+      <div class="ribon">
+        <h1>• P R O J E C T S •</h1>
+      </div>
+
+      <a
+        href="https://erkezh.github.io/wave-to-earth/index.html"
+        target="_blank"
+      >
+        <div class="title">
+          <h2>Wave to Earth – Music Website</h2>
+        </div>
+        <img src="./assets/w2e.png" alt="" />
+      </a>
+      <a href="https://erkezh.github.io/call-of-the-ancients/" target="_blank">
+        <div class="title">
+          <h2>Call of the Ancients – Hackathon Project</h2>
+        </div>
+        <img src="./assets/fairy-tale.png" alt="" />
+      </a>
+      <a href="https://erkezh.github.io/hiking-blog/" target="_blank">
+        <div class="title">
+          <h2>Hiking Blog – Figma to Code</h2>
+        </div>
+        <img src="./assets/hiking.png" alt="" />
+      </a>
+    </div>
+
+    <div class="details" id="details">
+      <div class="description">
+        <h1>Hi there</h1>
+        <p>
+          I’m Erkenaz, an Information Systems student at JIHC College with a
+          strong interest in web development, AI, and ethical tech. I’ve worked
+          with Python, JavaScript, HTML/CSS, and Flutter, and I enjoy blending
+          technical skills with creativity. <br /><br />
+          I’m a fast learner, detail-oriented, and always ready for new
+          challenges. I’m passionate about building meaningful solutions and
+          constantly growing as a developer.
+        </p>
+      </div>
+      <img src="./assets/IMG_1613.JPG" alt="my photo" />
+    </div>
+    <div class="contact" id="contact">
+      <h1>Contact Me</h1>
+      <form action="https://formspree.io/f/xkgjpooj" method="POST" novalidate>
+        <div class="form-floating">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Write your email here"
+            required
+          />
+          <label for="email" class="form-label">Your email</label>
+          <div class="invalid-feedback">Invalid email</div>
+          <div class="valid-feedback">Correct email</div>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            name="message"
+            id="message"
+            class="form-control"
+            placeholder="Write your message here"
+            required
+          />
+          <label for="message" class="form-label">Your message</label>
+        </div>
+
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+    <footer>
+      <p>
+        © 2025 Erkenaz Zhanabay. For educational and showcase purposes only.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
