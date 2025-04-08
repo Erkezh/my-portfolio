@@ -1,15 +1,42 @@
+function scrambleText(element, finalText, duration = 1.5) {
+  const chars = "アカサタナハマヤラワガザダバパ";
+  const frameRate = 30;
+  const steps = duration * frameRate;
+  let frame = 0;
+  const letters = finalText.split("");
+  let revealIndex = 0;
+
+  const scrambleInterval = setInterval(() => {
+    let displayText = "";
+
+    for (let i = 0; i < letters.length; i++) {
+      if (i < revealIndex) {
+        displayText += letters[i];
+      } else {
+        displayText += chars[Math.floor(Math.random() * chars.length)];
+      }
+    }
+
+    element.textContent = displayText;
+
+    // Каждые N кадров открываем новую букву
+    if (frame % Math.floor(steps / letters.length) === 0 && revealIndex < letters.length) {
+      revealIndex++;
+    }
+
+    frame++;
+    if (frame >= steps) {
+      clearInterval(scrambleInterval);
+      element.textContent = finalText;
+    }
+  }, 1000 / frameRate);
+}
 
 
-  gsap.to(".name h2", {
-    scrambleText: {
-      text: "Erkenaz Zhanabay", 
-      chars: "アカサタナハマヤラワガザダバパ",       
-      speed: 0.4,
-      revealDelay: 0.3
-    },
-    duration: 1.5,
-    ease: "none"
-  });
+const nameTitle = document.querySelector(".name h2");
+scrambleText(nameTitle, "Erkenaz Zhanabay", 2); // можно менять время
+
+ 
 
   ScrollTrigger.create({
     trigger: ".description h1",
@@ -17,12 +44,6 @@
     once: true,
     onEnter: () => {
       gsap.to(".description h1", {
-        scrambleText: {
-          text: "Hi there",
-          chars: "アカサタナハマヤラワガザダバパ",
-          speed: 0.4,
-          revealDelay: 0.3
-        },
         opacity: 1,
         duration: 1.5,
         ease: "none"
@@ -36,12 +57,6 @@
     once: true,
     onEnter: () => {
       gsap.to(".contact h1", {
-        scrambleText: {
-          text: "Contact Me",
-          chars: "アカサタナハマヤラワガザダバパ",
-          speed: 0.4,
-          revealDelay: 0.3
-        },
         opacity: 1,
         duration: 1.5,
         ease: "none"
